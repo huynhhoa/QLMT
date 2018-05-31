@@ -1,0 +1,118 @@
+﻿@model IEnumerable<QLMT.Models.May>
+
+@{
+    ViewBag.Title = "dangsudung";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>dangsudung</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "themmaytinh")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaTS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdMay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaTri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Loai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MauSac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KichThuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ocung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeDieuHanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoHoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayNhapMay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhTrangMay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaTS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdMay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaTri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Loai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MauSac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KichThuoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RAM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ocung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeDieuHanh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoHoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayNhapMay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhTrangMay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrangThai)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

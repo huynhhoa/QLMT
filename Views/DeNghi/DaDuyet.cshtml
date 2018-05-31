@@ -1,0 +1,90 @@
+﻿@model IEnumerable<QLMT.Models.DeNghi>
+
+@{
+    ViewBag.Title = "DaDuyet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Đề Nghị Đã Duyệt</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaDN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayDN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenNguoiDN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CMND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TruongBP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LyDo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayDuyetDN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhTrangDN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaDN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayDN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenNguoiDN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CMND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TruongBP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoTa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LyDo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GhiChu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayDuyetDN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhTrangDN)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        </td>
+    </tr>
+}
+
+</table>
